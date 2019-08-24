@@ -1,0 +1,19 @@
+.notification {
+  @apply mb-5 p-4 bg-dark-600 border-2 border-dark-300 text-sm text-generic-100 rounded;
+
+  a {
+    @apply underline;
+  }
+
+  &.is-warning {
+    @apply bg-warning border-warning;
+  }
+
+  &.is-danger {
+    @apply bg-danger-25 border-danger-20;
+  }
+
+  &.is-transparent {
+    @apply bg-transparent border-dark-400;
+  }
+}

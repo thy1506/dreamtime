@@ -1,0 +1,65 @@
+/*
+ * DreamTime | (C) 2019 by Ivan Bravo Bravo <ivan@dreamnet.tech>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License 3.0 as published by
+ * the Free Software Foundation.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <https://www.gnu.org/licenses/>.
+ */
+
+.box {
+  @apply bg-dark rounded px-5 py-3 shadow mb-5;
+
+  &.is-transparent {
+    @apply bg-transparent rounded-none shadow-none;
+  }
+
+  .box-title {
+    @apply font-bold text-generic-300 text-lg mb-2;
+  }
+}
+
+.box-section {
+  @apply px-0 py-1;
+
+  .box-section-item {
+    @apply flex py-3 px-5;
+
+    &:not(:last-child) {
+      @apply border-b border-dark-400;
+    }
+
+    .item-icon {
+      @apply mr-4 flex items-center justify-center text-2xl;
+      width: 42px;
+
+      img {
+        @apply rounded-full;
+      }
+    }
+
+    .item-text {
+      @apply flex-1 flex flex-col justify-center;
+
+      .item-label {
+        @apply text-generic-300 font-semibold;
+        transition: all 0.1s ease-in-out;
+      }
+
+      .item-description {
+        @apply text-sm;
+
+        a {
+          @apply underline;
+        }
+      }
+    }
+
+    .item-extra {
+      @apply flex items-center justify-center;
+      min-width: 200px;
+    }
+  }
+}
